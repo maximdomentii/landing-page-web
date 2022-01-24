@@ -3,7 +3,13 @@ Quickly deploy your static website from GitHub to AWS S3 with AWS CodePipeline.
 
 ## Package and Deploy
 ```shell
-#aws s3 rm s3://maximdomentii.com --recursive
+# Find the policy arn and run:
+aws iam detach-role-policy \
+    --role-name landing-page-web-CodeBuildRole \
+    --policy-arn <policy_arn>
+
+aws s3 rm s3://maximdomentii.com-pipeline --recursive
+aws s3 rm s3://maximdomentii.com --recursive
 
 aws cloudformation delete-stack \
     --stack-name landing-page-web
@@ -15,7 +21,7 @@ aws cloudformation package \
 aws cloudformation deploy \
   --template-file cloudformation-template-output.yaml \
   --stack-name landing-page-web \
-  --capabilities CAPABILITY_IAM \
+  --capabilities CAPABILITY_NAMED_IAM \
   --parameter-overrides "GithubOAuthToken=???"
 ```
 
