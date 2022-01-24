@@ -118,7 +118,7 @@ const ContactForm = () => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Basic Y29udGFjdC11czo1ZSZ5XlhzcXY1Ml9eZ20k'
+                'Authorization': 'Basic ' + contactDataText.contactFormSubmitToken
             },
             body: JSON.stringify({
                 name: nameValue,
@@ -127,7 +127,7 @@ const ContactForm = () => {
                 text:textValue
             })
         };
-        fetch('https://2y57736z03.execute-api.eu-central-1.amazonaws.com/v1/contact-us', requestOptions)
+        fetch(contactDataText.contactFormSubmitUrl, requestOptions)
             .then(response => response.json())
             .then(data => {
                 if (data && data.statusCode && data.statusCode === 200){

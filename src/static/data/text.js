@@ -184,6 +184,8 @@ export const text = {
             contactFormAfterSubmitSuccessMessageContent: "I will contact you soon",
             contactFormAfterSubmitErrorMessageHeader: "Service unavailable",
             contactFormAfterSubmitErrorMessageContent: "Please try again later or contact me on LinkedIn",
+            contactFormSubmitUrl: "https://u28twmfddh.execute-api.eu-central-1.amazonaws.com/v1/contact-us",
+            contactFormSubmitToken: "Y29udGFjdC11czo1ZSZ5XlhzcXY1Ml9eZ20k"
         },
         about: {
             aboutImgSrc: profileAboutImg,
