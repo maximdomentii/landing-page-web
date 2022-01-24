@@ -85,13 +85,6 @@ const ContactForm = () => {
         }
     }
 
-    const fieldValidators = {
-        name: validateName,
-        email: validateEmail,
-        phone: validatePhone,
-        text: validateText
-    }
-
     useEffect(() => {
         validateName();
     }, [nameValue]);
