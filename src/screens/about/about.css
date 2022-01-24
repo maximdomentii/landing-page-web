@@ -1,0 +1,56 @@
+.about-container .margin-top-1em {
+    margin-top: 1em;
+}
+
+.about-container .font-family-bebas-neue {
+    font-family: bebas-neue;
+    letter-spacing: 0.5px;
+    color: black;
+}
+.about-title {
+    line-height: 32px;
+    font-weight: bold;
+    font-size: 38px;
+    text-align: center;
+}
+.about-subtitle {
+    line-height: 32px;
+    font-weight: bold;
+    font-size: 22px;
+}
+.about-description {
+    line-height: 32px;
+    font-size: 18px;
+}
+
+.ui.horizontal.divider.about-journey-title {
+    line-height: 32px;
+    font-weight: bold;
+    font-size: 22px;
+    color: black;
+}
+
+.journey-item-company {
+    line-height: 32px;
+    font-size: 26px;
+}
+
+.journey-item-position {
+    line-height: 32px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.journey-item-location {
+    line-height: 32px;
+    font-size: 22px;
+}
+
+.journey-item-description {
+    line-height: 32px;
+    font-size: 18px;
+}
+
+.maring-0 {
+    margin: 0;
+}

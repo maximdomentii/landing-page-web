@@ -1,0 +1,40 @@
+.text-align-center {
+    text-align: center;
+}
+.contact-container .margin-top-1em {
+    margin-top: 1em;
+}
+
+.contact-container .font-family-bebas-neue {
+    font-family: bebas-neue;
+    letter-spacing: 0.5px;
+    color: black;
+}
+.contact-title {
+    line-height: 32px;
+    font-weight: bold;
+    font-size: 38px;
+    text-align: center;
+}
+.contact-description {
+    line-height: 32px;
+    font-size: 22px;
+}
+.contact-icon-color-black {
+    color: black;
+}
+.ui.form.contact-form {
+    line-height: 32px;
+    font-size: 18px;
+}
+.ui.basic.black.button.form-button {
+    border-radius: 0;
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    transition: 0.1s background-color linear, 0.1s color linear;
+}
+.ui.basic.black.button.form-button:hover {
+    background-color: black!important;
+    color: white!important;
+}

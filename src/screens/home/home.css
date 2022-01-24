@@ -1,0 +1,80 @@
+.ui.inverted.segment.profile-photo-background {
+    background-image: url("./../../static/images/profile_croped_grey.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 0;
+    padding-top: 51.5%; /* (img-height / img-width * width) */
+    position: relative;
+    text-align: center;
+}
+.profile-photo-background .profile-photo-content {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    right: 25%;
+    color: white;
+    font-weight: bold;
+    font-size: 300%;
+}
+.profile-photo-background .profile-photo-content .profile-photo-title {
+    margin: 0;
+}
+.profile-photo-background .profile-photo-content .profile-photo-subtitle {
+}
+.text-container {
+    color: black;
+    text-align: center;
+}
+.text-container .text-container-header {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 32px;
+}
+.text-container .text-container-paragraph {
+    font-size: 18px;
+    line-height: 32px;
+}
+.skills-overview-container {
+    color: black;
+    text-align: center;
+}
+.skills-overview-container .skills-item-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+.skills-overview-container .skills-item-description {
+    font-size: 16px;
+}
+.home-container .margin-top-3em {
+    margin-top: 3em;
+}
+.home-container .font-family-bebas-neue {
+    font-family: bebas-neue;
+    letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 640px) {
+    .ui.inverted.segment.profile-photo-background {
+        background-image: url("./../../static/images/profile_croped_grey_mobile.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 0;
+        padding-top: 157.2%; /* (img-height / img-width * width) */
+        position: relative;
+        text-align: center;
+    }
+    .profile-photo-background .profile-photo-content {
+        position: absolute;
+        top: 20%;
+        left: 25%;
+        right: 25%;
+        color: white;
+        font-weight: bold;
+        font-size: 200%;
+    }
+    .profile-photo-background .profile-photo-content .profile-photo-title {
+        margin: 0;
+    }
+    .profile-photo-background .profile-photo-content .profile-photo-subtitle {
+    }
+}
