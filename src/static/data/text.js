@@ -179,7 +179,7 @@ export const text = {
             contactFormAfterSubmitSuccessMessageContent: "I will contact you soon",
             contactFormAfterSubmitErrorMessageHeader: "Service unavailable",
             contactFormAfterSubmitErrorMessageContent: "Please try again later or contact me on LinkedIn",
-            contactFormSubmitUrl: "https://hy79ntd3lg.execute-api.eu-central-1.amazonaws.com/v1/contact-us",
+            contactFormSubmitUrl: "https://corsr66cq7.execute-api.eu-central-1.amazonaws.com/v1/contact-us",
             contactFormSubmitToken: "Y29udGFjdC11czo1ZSZ5XlhzcXY1Ml9eZ20k"
         },
         about: {
@@ -387,7 +387,7 @@ export const text = {
             contactFormAfterSubmitSuccessMessageContent: "Ich werde Sie bald kontaktieren",
             contactFormAfterSubmitErrorMessageHeader: "Dienst nicht verfügbar",
             contactFormAfterSubmitErrorMessageContent: "Bitte versuchen Sie es später erneut oder kontaktieren Sie mich auf LinkedIn",
-            contactFormSubmitUrl: "https://hy79ntd3lg.execute-api.eu-central-1.amazonaws.com/v1/contact-us",
+            contactFormSubmitUrl: "https://corsr66cq7.execute-api.eu-central-1.amazonaws.com/v1/contact-us",
             contactFormSubmitToken: "Y29udGFjdC11czo1ZSZ5XlhzcXY1Ml9eZ20k"
         },
         about: {

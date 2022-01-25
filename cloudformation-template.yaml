@@ -19,6 +19,18 @@ Parameters:
     Type: String
     Default: master
     Description: "master branch for releases"
+  DomainName:
+    Type: String
+    Description: The domain name.
+    Default: maximdomentii.com
+  PriceClass:
+    Type: String
+    Description: The CloudFront distribution price class
+    Default: 'PriceClass_All'
+    AllowedValues:
+      - 'PriceClass_100'
+      - 'PriceClass_200'
+      - 'PriceClass_All'
 
 Resources:
   CodePipeline:
@@ -202,22 +214,69 @@ Resources:
       BucketName: maximdomentii.com
       WebsiteConfiguration:
         IndexDocument: index.html
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+  DeployBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref DeployBucket
+      PolicyDocument:
+        Statement:
+          - Action:
+              - s3:GetObject
+            Effect: Allow
+            Resource: !Join [ '', [ 'arn:aws:s3:::', !Ref DeployBucket, '/*' ] ]
+            Principal:
+              CanonicalUser: !GetAtt CloudFrontOriginAccessIdentity.S3CanonicalUserId
+  Cert:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: !Ref DomainName
+      DomainValidationOptions:
+        - DomainName: !Ref DomainName
+          ValidationDomain: !Ref DomainName
+      ValidationMethod: DNS
   Distribution:
     Type: "AWS::CloudFront::Distribution"
     Properties:
       DistributionConfig:
+        Aliases:
+          - !Ref DomainName
         Origins:
-          -
-            DomainName: !GetAtt DeployBucket.DomainName
+          - DomainName: !GetAtt DeployBucket.DomainName
             Id: !Ref DeployBucket
             S3OriginConfig:
-              OriginAccessIdentity: ''
+              OriginAccessIdentity:
+                !Join ['', ['origin-access-identity/cloudfront/', !Ref CloudFrontOriginAccessIdentity]]
         DefaultRootObject: index.html
         Enabled: true
         DefaultCacheBehavior:
+          Compress: true
           MinTTL: 86400
           MaxTTL: 31536000
           ForwardedValues:
             QueryString: true
           TargetOriginId: !Ref DeployBucket
           ViewerProtocolPolicy: "redirect-to-https"
+        CustomErrorResponses:
+          - ErrorCachingMinTTL: 300
+            ErrorCode: 403
+            ResponseCode: 200
+            ResponsePagePath: /index.html
+          - ErrorCachingMinTTL: 300
+            ErrorCode: 404
+            ResponseCode: 200
+            ResponsePagePath: /index.html
+        HttpVersion: http2
+        PriceClass: !Ref PriceClass
+        ViewerCertificate:
+          AcmCertificateArn: !Ref Cert
+          MinimumProtocolVersion: TLSv1
+          SslSupportMethod: sni-only
+  CloudFrontOriginAccessIdentity:
+    Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
+    Properties:
+      CloudFrontOriginAccessIdentityConfig:
+        Comment: !Sub 'CloudFront OAI for ${DomainName}'
