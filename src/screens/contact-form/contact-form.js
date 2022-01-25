@@ -1,9 +1,13 @@
 import {useEffect, useState} from "react";
 import {Button, Container, Form, Icon, Input, Message, TextArea} from "semantic-ui-react";
-import { text } from "../../static/data/text";
 import './contact-form.css';
+import {useStore} from "../../store/store";
 
 const ContactForm = () => {
+
+    const [{textData}] = useStore();
+
+    const contactDataText = textData.contact;
 
     const [emailFieldError, setEmailFieldError] = useState(false);
     const [nameFieldError, setNameFieldError] = useState(false);
@@ -137,8 +141,6 @@ const ContactForm = () => {
                 }
             });
     }
-
-    const contactDataText = text.en.contact;
 
     return (
         <div className='contact-container'>

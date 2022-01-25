@@ -3,12 +3,16 @@ import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import { Container, Grid, Image, Segment } from "semantic-ui-react";
 import './home.css';
-import { text } from "../../static/data/text";
+import {useStore} from "../../store/store";
 
 const Home = () => {
 
     const [currentImage, setCurrentImage] = useState(0);
     const [viewerIsOpen, setViewerIsOpen] = useState(false);
+
+    const [{textData}] = useStore();
+
+    const homeTextData = textData.home;
 
     const openLightbox = useCallback((event, { photo, index }) => {
         setCurrentImage(index);
@@ -19,8 +23,6 @@ const Home = () => {
         setCurrentImage(0);
         setViewerIsOpen(false);
     };
-
-    const homeTextData = text.en.home;
 
     return (
         <div className='home-container'>

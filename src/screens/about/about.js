@@ -1,10 +1,12 @@
 import {Container, Divider, Grid, Icon, Image} from "semantic-ui-react";
-import { text } from "../../static/data/text";
 import './about.css'
+import {useStore} from "../../store/store";
 
 const About = () => {
 
-    const aboutTextData = text.en.about;
+    const [{textData}] = useStore();
+
+    const aboutTextData = textData.about;
 
     return (
         <div className='about-container'>

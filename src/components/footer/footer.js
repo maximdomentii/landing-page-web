@@ -1,9 +1,10 @@
 import {Container, Segment} from "semantic-ui-react";
-import { text } from "../../static/data/text";
+import {useStore} from "../../store/store";
 
 const Footer = () => {
+    const [{textData}] = useStore();
 
-    const footerTextData = text.en.footer;
+    const footerTextData = textData.footer;
 
     return (
         <Segment basic padded inverted style={
