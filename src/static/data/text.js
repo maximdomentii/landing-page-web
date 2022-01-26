@@ -447,7 +447,7 @@ export const text = {
                     companyName: "University Politehnica of Bucharest",
                     position: "Bachelor in Informatik, Oktober 2012 - Juli 2016",
                     location: "Bukarest, Rumänien",
-                    description: "Die Universität Politehnica in Bukarest ist eine der besten technischen Universitäten in Osteuropa. Insbesondere der Fachbereich Informatik bietet jedes Jahr viele Ingenieure den bekanntesten Softwarefirmen der Welt an. Hier habe ich Informatik und Informatik studiert und 2016 meinen Bachelor als Software Engineer gemacht."
+                    description: "Die Universität Politehnica in Bukarest ist eine der besten technischen Universitäten in Osteuropa. Insbesondere der Fachbereich Informatik bietet jedes Jahr viele Ingenieure den bekanntesten Softwarefirmen der Welt an. Hier habe ich Computerwissenschaften und Informatik studiert und 2016 meinen Bachelor als Software Engineer gemacht."
                 }
             ]
         },
