@@ -59,14 +59,16 @@ export const text = {
                 },
                 {
                     id: 'p2',
-                    text: "I was working as a Lead Developer in different projects of the two, Swiss based, biggest Banks in the World since 2019. I have been part of the teams, as a senior engineer, that designed and developed  projects for software companies since 2017. I started my career in 2015 working initially for a retail company and then in private banking sector"
+                    text: "I was working as a Lead Developer in different projects of the two, Swiss based, biggest Banks in the World since 2019. I have been part of the teams, as a senior engineer, that designed and developed  projects for software companies since 2017. I've started my career in 2015 working initially for a retail company and then in private banking sector"
                 },
                 {
                     id: 'p3',
                     text: "I have studied Computer Science and Information Technology at the University \"Politehnica\" of Bucharest between 2012 and 2016 where I've got my bachelor degree as a Software Engineer"
                 }
             ],
+            shortDescriptionMoreButtonLabel: "MORE",
             skillsColumns: 4,
+            skillsHeader: "SKILLS",
             skills: [
                 {
                     id: 'skill1',
@@ -101,7 +103,7 @@ export const text = {
                 }
             ],
             familyPhotos: [
-                {
+                /*{
                     src: family0Img,
                     width: 4,
                     height: 3
@@ -110,7 +112,7 @@ export const text = {
                     src: family1Img,
                     width: 3,
                     height: 4
-                },
+                },*/
                 {
                     src: family2Img,
                     width: 3,
@@ -121,7 +123,7 @@ export const text = {
                     width: 4,
                     height: 4
                 },
-                {
+                /*{
                     src: family4Img,
                     width: 4,
                     height: 3
@@ -130,7 +132,7 @@ export const text = {
                     src: family5Img,
                     width: 3,
                     height: 4
-                },
+                },*/
                 {
                     src: family6Img,
                     width: 3,
@@ -140,7 +142,7 @@ export const text = {
                     src: family7Img,
                     width: 4,
                     height: 4
-                },
+                }/*,
                 {
                     src: family8Img,
                     width: 4,
@@ -155,7 +157,7 @@ export const text = {
                     src: family10Img,
                     width: 4,
                     height: 3
-                }
+                }*/
             ]
         },
         contact: {
@@ -267,14 +269,16 @@ export const text = {
                 },
                 {
                     id: 'p2',
-                    text: "Seit 2019 arbeite ich als Lead Developer in verschiedenen Projekten der beiden größten Banken der Welt mit Sitz in der Schweiz. Seit 2017 bin ich als Senior Engineer Teil der Teams, die Projekte für Softwareunternehmen konzipiert und entwickelt haben. I begann meine Karriere 2015 zunächst für ein Handelsunternehmen und dann im Private Banking-Bereich"
+                    text: "Seit 2019 arbeite ich als Lead Developer in verschiedenen Projekten der beiden größten Banken der Welt mit Sitz in der Schweiz. Seit 2017 bin ich als Senior Engineer Teil der Teams, die Projekte für Softwareunternehmen konzipiert und entwickelt haben. Ich habe meine Karriere 2015 begonnen und zunächst für ein Einzelhandels-Firma und dann im Private Banking-Bereich gearbeitet"
                 },
                 {
                     id: 'p3',
                     text: "Ich habe zwischen 2012 und 2016 Informatik und Informationstechnologie an der Universität \"Politehnica\" in Bucharest studiert, wo ich meinen Bachelor-Abschluss als Software-Ingenieur gemacht habe"
                 }
             ],
+            shortDescriptionMoreButtonLabel: "MEHR",
             skillsColumns: 4,
+            skillsHeader: "FÄHIGKEITEN",
             skills: [
                 {
                     id: 'skill1',
@@ -309,7 +313,7 @@ export const text = {
                 }
             ],
             familyPhotos: [
-                {
+                /*{
                     src: family0Img,
                     width: 4,
                     height: 3
@@ -318,7 +322,7 @@ export const text = {
                     src: family1Img,
                     width: 3,
                     height: 4
-                },
+                },*/
                 {
                     src: family2Img,
                     width: 3,
@@ -329,7 +333,7 @@ export const text = {
                     width: 4,
                     height: 4
                 },
-                {
+                /*{
                     src: family4Img,
                     width: 4,
                     height: 3
@@ -338,7 +342,7 @@ export const text = {
                     src: family5Img,
                     width: 3,
                     height: 4
-                },
+                },*/
                 {
                     src: family6Img,
                     width: 3,
@@ -348,7 +352,7 @@ export const text = {
                     src: family7Img,
                     width: 4,
                     height: 4
-                },
+                }/*,
                 {
                     src: family8Img,
                     width: 4,
@@ -363,7 +367,7 @@ export const text = {
                     src: family10Img,
                     width: 4,
                     height: 3
-                }
+                }*/
             ]
         },
         contact: {

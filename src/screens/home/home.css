@@ -29,6 +29,7 @@
     font-weight: bold;
     font-size: 22px;
     line-height: 32px;
+    color: black;
 }
 .text-container .text-container-paragraph {
     font-size: 18px;
@@ -37,6 +38,12 @@
 .skills-overview-container {
     color: black;
     text-align: center;
+}
+.skills-overview-container .text-container-header {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 32px;
+    color: black;
 }
 .skills-overview-container .skills-item-title {
     font-weight: bold;

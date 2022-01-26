@@ -1,14 +1,17 @@
 import { useState, useCallback } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
-import { Container, Grid, Image, Segment } from "semantic-ui-react";
+import {Button, Container, Divider, Grid, Image, Segment} from "semantic-ui-react";
 import './home.css';
 import {useStore} from "../../store/store";
+import {useNavigate} from "react-router-dom";
 
 const Home = () => {
 
     const [currentImage, setCurrentImage] = useState(0);
     const [viewerIsOpen, setViewerIsOpen] = useState(false);
+
+    const navigate = useNavigate();
 
     const [{textData}] = useStore();
 
@@ -23,6 +26,10 @@ const Home = () => {
         setCurrentImage(0);
         setViewerIsOpen(false);
     };
+
+    const handleDescriptionMoreClick = () => {
+        navigate('/about');
+    }
 
     return (
         <div className='home-container'>
@@ -39,8 +46,14 @@ const Home = () => {
                         <p key={key} className='text-container-paragraph'>{data.text}</p>
                     );
                 })}
+                <Button className='form-button' basic color='black' onClick={handleDescriptionMoreClick}>
+                    {homeTextData.shortDescriptionMoreButtonLabel}
+                </Button>
             </Container>
             <Container className='skills-overview-container margin-top-3em font-family-bebas-neue'>
+                <Divider horizontal className='text-container-header'>
+                    {homeTextData.skillsHeader}
+                </Divider>
                 <Grid stackable doubling columns={homeTextData.skillsColumns}>
                     {homeTextData.skills.map((data, key) => {
                         return (
@@ -54,7 +67,9 @@ const Home = () => {
                 </Grid>
             </Container>
             <Container className='text-container margin-top-3em font-family-bebas-neue'>
-                <p className='text-container-header'>{homeTextData.familyHeader}</p>
+                <Divider horizontal className='text-container-header'>
+                    {homeTextData.familyHeader}
+                </Divider>
                 {homeTextData.familyParagraphs.map((data, key) => {
                     return (
                         <p key={key} className='text-container-paragraph'>{data.text}</p>
