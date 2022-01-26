@@ -3,3 +3,26 @@
     font-family: bebas-neue;
     font-size: 110%;
 }
+
+.ui.secondary.menu .item.mobile-dropdown-button {
+    padding: 0;
+}
+
+.ui.dropdown .menu>.item .dropdown.icon.mobile-dropdown-menu-item-language {
+    width: auto;
+    margin: 0;
+    float: none;
+    margin-left: -10px;
+}
+
+.ui.secondary.menu .dropdown.item>.menu.mobile-dropdown-menu {
+    right: -42px;
+    border: 0;
+    border-radius: 0;
+    top: 40px;
+}
+
+.ui.secondary.menu .dropdown.item>.menu.mobile-dropdown-menu .mobile-dropdown-menu-item {
+    text-align: center;
+    padding: 0!important;
+}

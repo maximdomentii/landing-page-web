@@ -3,10 +3,14 @@ import {useNavigate} from "react-router-dom";
 import './header-menu.css';
 import {useStore} from "../../store/store";
 import {setLanguage} from "../../store/reducer";
+import Responsive from "semantic-ui-react/dist/commonjs/addons/Responsive";
+import useWindowDimensions from "./hooks/useWindowDimensions";
 
 const HeaderMenu = () => {
     const [{textData}] = useStore();
     const [, dispatch] = useStore();
+
+    const { height, width } = useWindowDimensions();
 
     const navigate = useNavigate();
 
@@ -16,7 +20,7 @@ const HeaderMenu = () => {
         navigate(to);
     }
 
-    const handleLanguageChange = (e, { value }) => {
+    const handleLanguageChange = (e, {value}) => {
         dispatch(setLanguage(value));
     }
 
@@ -29,11 +33,11 @@ const HeaderMenu = () => {
                 marginBottom: '1em',
             }
         }>
-            <Menu secondary stackable size='massive'>
+            <Menu secondary size='massive'>
                 <Menu.Item header fitted onClick={() => handleItemClick('/')}>
                     <Image src={headerDataText.logoImgSrc}/>
                 </Menu.Item>
-                <Menu.Menu position='right'>
+                <Responsive as={Menu.Menu} minWidth={790} position='right'>
                     <Menu.Item
                         className='header-menu-item'
                         name={headerDataText.menuItemNameAbout}
@@ -45,6 +49,7 @@ const HeaderMenu = () => {
                         onClick={() => handleItemClick('/contact')}
                     />
                     <Menu.Item
+                        fitted
                         href={headerDataText.menuItemHrefLinkedin}
                         target="_blank"
                         name={headerDataText.menuItemNameLinkedin}
@@ -52,8 +57,9 @@ const HeaderMenu = () => {
                         <Icon name='linkedin' size='large'/>
                     </Menu.Item>
                     <Menu.Item
-                               className='header-menu-item'
-                               name={headerDataText.menuItemNameLanguage}
+                        fitted
+                        className='header-menu-item'
+                        name={headerDataText.menuItemNameLanguage}
                     >
                         <Dropdown
                             simple
@@ -65,7 +71,60 @@ const HeaderMenu = () => {
                             text=' '
                         />
                     </Menu.Item>
-                </Menu.Menu>
+                </Responsive>
+                <Responsive as={Menu.Menu} maxWidth={789} position='right'>
+                    <Dropdown className='mobile-dropdown-button'
+                        item
+                        icon='bars'
+                    >
+                        <Dropdown.Menu
+                            style={{
+                                width: width
+                            }}
+                            className='mobile-dropdown-menu'
+                        >
+                            <Dropdown.Item className='mobile-dropdown-menu-item'>
+                                <Menu.Item
+                                    className='header-menu-item'
+                                    name={headerDataText.menuItemNameAbout}
+                                    onClick={() => handleItemClick('/about')}
+                                />
+                            </Dropdown.Item>
+                            <Dropdown.Item className='mobile-dropdown-menu-item'>
+                                <Menu.Item
+                                    className='header-menu-item'
+                                    name={headerDataText.menuItemNameContact}
+                                    onClick={() => handleItemClick('/contact')}
+                                />
+                            </Dropdown.Item>
+                            <Dropdown.Item className='mobile-dropdown-menu-item'>
+                                <Menu.Item
+                                    href={headerDataText.menuItemHrefLinkedin}
+                                    target="_blank"
+                                    name={headerDataText.menuItemNameLinkedin}
+                                >
+                                    <Icon name='linkedin' size='large'/>
+                                </Menu.Item>
+                            </Dropdown.Item >
+                            <Dropdown.Item className='mobile-dropdown-menu-item'>
+                                <Menu.Item
+                                    className='header-menu-item'
+                                    name={headerDataText.menuItemNameLanguage}
+                                >
+                                    <Dropdown
+                                        simple
+                                        className='icon mobile-dropdown-menu-item-language'
+                                        icon='world'
+                                        options={headerDataText.languageOptions}
+                                        onChange={handleLanguageChange}
+                                        defaultValue={headerDataText.languageOptions[0].value}
+                                        text=' '
+                                    />
+                                </Menu.Item>
+                            </Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </Responsive>
             </Menu>
         </div>
     )
