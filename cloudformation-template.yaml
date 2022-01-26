@@ -31,6 +31,9 @@ Parameters:
       - 'PriceClass_100'
       - 'PriceClass_200'
       - 'PriceClass_All'
+  CertArn:
+    Type: String
+    Description: The domain name certificate for CloudFront.
 
 Resources:
   CodePipeline:
@@ -230,14 +233,14 @@ Resources:
             Resource: !Join [ '', [ 'arn:aws:s3:::', !Ref DeployBucket, '/*' ] ]
             Principal:
               CanonicalUser: !GetAtt CloudFrontOriginAccessIdentity.S3CanonicalUserId
-  Cert:
-    Type: AWS::CertificateManager::Certificate
-    Properties:
-      DomainName: !Ref DomainName
-      DomainValidationOptions:
-        - DomainName: !Ref DomainName
-          ValidationDomain: !Ref DomainName
-      ValidationMethod: DNS
+#  Cert:
+#    Type: AWS::CertificateManager::Certificate
+#    Properties:
+#      DomainName: !Ref DomainName
+#      DomainValidationOptions:
+#        - DomainName: !Ref DomainName
+#          ValidationDomain: !Ref DomainName
+#      ValidationMethod: DNS
   Distribution:
     Type: "AWS::CloudFront::Distribution"
     Properties:
@@ -272,7 +275,7 @@ Resources:
         HttpVersion: http2
         PriceClass: !Ref PriceClass
         ViewerCertificate:
-          AcmCertificateArn: !Ref Cert
+          AcmCertificateArn: !Ref CertArn
           MinimumProtocolVersion: TLSv1
           SslSupportMethod: sni-only
   CloudFrontOriginAccessIdentity:
