@@ -5,8 +5,11 @@ import {useStore} from "../../store/store";
 import {setLanguage} from "../../store/reducer";
 import Responsive from "semantic-ui-react/dist/commonjs/addons/Responsive";
 import useWindowDimensions from "./hooks/useWindowDimensions";
+import {useState} from "react";
 
 const HeaderMenu = () => {
+    const [mobileDropdownButtonIcon, setMobileDropdownButtonIcon] = useState('bars');
+
     const [{textData}] = useStore();
     const [, dispatch] = useStore();
 
@@ -50,6 +53,7 @@ const HeaderMenu = () => {
                     />
                     <Menu.Item
                         fitted
+                        className='header-menu-item'
                         href={headerDataText.menuItemHrefLinkedin}
                         target="_blank"
                         name={headerDataText.menuItemNameLinkedin}
@@ -62,21 +66,33 @@ const HeaderMenu = () => {
                         name={headerDataText.menuItemNameLanguage}
                     >
                         <Dropdown
-                            simple
                             className='icon'
                             icon='world'
-                            options={headerDataText.languageOptions}
-                            onChange={handleLanguageChange}
-                            defaultValue={headerDataText.languageOptions[0].value}
-                            text=' '
-                        />
+                        >
+                            <Dropdown.Menu>
+                                {headerDataText.languageOptions.map((data, key) => {
+                                    return (
+                                        <Dropdown.Item
+                                            key={key}
+                                            text={data.text}
+                                            value={data.value}
+                                            active={data.active}
+                                            onClick={handleLanguageChange}
+                                        />
+                                    )
+                                })}
+                            </Dropdown.Menu>
+                        </Dropdown>
                     </Menu.Item>
                 </Responsive>
                 <Responsive as={Menu.Menu} maxWidth={789} position='right'>
                     <Dropdown className='mobile-dropdown-button'
-                        item
-                        icon='bars'
+                              item
+                              icon={mobileDropdownButtonIcon}
+                              onOpen={(e, data) => {setMobileDropdownButtonIcon('close')}}
+                              onClose={(e, data) => {setMobileDropdownButtonIcon('bars')}}
                     >
+                        {/*<Icon name='bars' size='large'/>*/}
                         <Dropdown.Menu
                             style={{
                                 width: width
@@ -99,6 +115,7 @@ const HeaderMenu = () => {
                             </Dropdown.Item>
                             <Dropdown.Item className='mobile-dropdown-menu-item'>
                                 <Menu.Item
+                                    className='header-menu-item'
                                     href={headerDataText.menuItemHrefLinkedin}
                                     target="_blank"
                                     name={headerDataText.menuItemNameLinkedin}
@@ -112,14 +129,23 @@ const HeaderMenu = () => {
                                     name={headerDataText.menuItemNameLanguage}
                                 >
                                     <Dropdown
-                                        simple
                                         className='icon mobile-dropdown-menu-item-language'
                                         icon='world'
-                                        options={headerDataText.languageOptions}
-                                        onChange={handleLanguageChange}
-                                        defaultValue={headerDataText.languageOptions[0].value}
-                                        text=' '
-                                    />
+                                    >
+                                        <Dropdown.Menu>
+                                            {headerDataText.languageOptions.map((data, key) => {
+                                                return (
+                                                    <Dropdown.Item
+                                                        key={key}
+                                                        text={data.text}
+                                                        value={data.value}
+                                                        active={data.active}
+                                                        onClick={handleLanguageChange}
+                                                    />
+                                                )
+                                            })}
+                                        </Dropdown.Menu>
+                                    </Dropdown>
                                 </Menu.Item>
                             </Dropdown.Item>
                         </Dropdown.Menu>

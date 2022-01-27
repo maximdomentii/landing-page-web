@@ -4,6 +4,12 @@
     font-size: 110%;
 }
 
+.ui.secondary.menu .item.header-menu-item:hover {
+    background: none;
+    color: black;
+    text-shadow: 0px 0px 1px black;
+}
+
 .ui.secondary.menu .item.mobile-dropdown-button {
     padding: 0;
 }
@@ -20,6 +26,18 @@
     border: 0;
     border-radius: 0;
     top: 40px;
+}
+
+.ui.secondary.menu .dropdown.item.mobile-dropdown-button:hover {
+    background: none;
+}
+
+.ui.secondary.menu .active.item.mobile-dropdown-button {
+    background: none;
+}
+
+.ui.secondary.menu .active.item.mobile-dropdown-button:hover {
+    background: none;
 }
 
 .ui.secondary.menu .dropdown.item>.menu.mobile-dropdown-menu .mobile-dropdown-menu-item {

@@ -44,8 +44,8 @@ export const text = {
             menuItemHrefLinkedin: "https://www.linkedin.com/in/maxim-domentii-4400377a/",
             menuItemNameLanguage: "Language",
             languageOptions: [
-                { key: 'EN', text: 'EN', value: 'EN'},
-                { key: 'DE', text: 'DE', value: 'DE'}
+                { key: 'EN', text: 'EN', value: 'EN', active: true},
+                { key: 'DE', text: 'DE', value: 'DE', active: false}
             ]
         },
         home: {
@@ -254,8 +254,8 @@ export const text = {
             menuItemHrefLinkedin: "https://www.linkedin.com/in/maxim-domentii-4400377a/",
             menuItemNameLanguage: "Language",
             languageOptions: [
-                { key: 'EN', text: 'EN', value: 'EN'},
-                { key: 'DE', text: 'DE', value: 'DE'}
+                { key: 'EN', text: 'EN', value: 'EN', active: false},
+                { key: 'DE', text: 'DE', value: 'DE', active: true}
             ]
         },
         home: {
