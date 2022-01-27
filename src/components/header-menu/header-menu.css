@@ -18,7 +18,6 @@
     width: auto;
     margin: 0;
     float: none;
-    margin-left: -10px;
 }
 
 .ui.secondary.menu .dropdown.item>.menu.mobile-dropdown-menu {
@@ -43,4 +42,8 @@
 .ui.secondary.menu .dropdown.item>.menu.mobile-dropdown-menu .mobile-dropdown-menu-item {
     text-align: center;
     padding: 0!important;
+}
+
+.ui.dropdown .menu .item .dropdown.icon:before {
+    content: none;
 }
