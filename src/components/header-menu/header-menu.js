@@ -43,6 +43,11 @@ const HeaderMenu = () => {
                 <Responsive as={Menu.Menu} minWidth={790} position='right'>
                     <Menu.Item
                         className='header-menu-item'
+                        name={headerDataText.menuItemNameHome}
+                        onClick={() => handleItemClick('/')}
+                    />
+                    <Menu.Item
+                        className='header-menu-item'
                         name={headerDataText.menuItemNameAbout}
                         onClick={() => handleItemClick('/about')}
                     />
@@ -99,6 +104,13 @@ const HeaderMenu = () => {
                             }}
                             className='mobile-dropdown-menu'
                         >
+                            <Dropdown.Item className='mobile-dropdown-menu-item'>
+                                <Menu.Item
+                                    className='header-menu-item'
+                                    name={headerDataText.menuItemNameHome}
+                                    onClick={() => handleItemClick('/')}
+                                />
+                            </Dropdown.Item>
                             <Dropdown.Item className='mobile-dropdown-menu-item'>
                                 <Menu.Item
                                     className='header-menu-item'

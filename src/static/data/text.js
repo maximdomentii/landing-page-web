@@ -38,6 +38,7 @@ export const text = {
     EN: {
         header: {
             logoImgSrc: logoImg,
+            menuItemNameHome: "HOME",
             menuItemNameAbout: "ABOUT",
             menuItemNameContact: "CONTACT",
             menuItemNameLinkedin: "LinkedIn",
@@ -248,8 +249,9 @@ export const text = {
     DE: {
         header: {
             logoImgSrc: logoImg,
+            menuItemNameHome: "HOME",
             menuItemNameAbout: "ÜBER MICH",
-            menuItemNameContact: "KONTAKTIERE",
+            menuItemNameContact: "KONTAKT",
             menuItemNameLinkedin: "LinkedIn",
             menuItemHrefLinkedin: "https://www.linkedin.com/in/maxim-domentii-4400377a/",
             menuItemNameLanguage: "Language",
@@ -371,7 +373,7 @@ export const text = {
             ]
         },
         contact: {
-            contactTitle: "KONTAKTIERE",
+            contactTitle: "KONTAKT",
             contactDescription: "Ich freue mich immer darauf, mit neuen Leuten zusammenzuarbeiten und an neuen interessanten Projekten zu arbeiten. Wenn Sie etwas im Sinn haben, kontaktieren Sie mich und ich werde gerne Ideen mit Ihnen besprechen.",
             contactHrefLinkedin: "https://www.linkedin.com/in/maxim-domentii-4400377a/",
             contactFormNameLabel: "Name",
