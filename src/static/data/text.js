@@ -193,10 +193,18 @@ export const text = {
             aboutJourneyTitle: "MY JOURNEY",
             aboutJourneyItems: [
                 {
+                    id: "item0",
+                    logoImgSrc: ubsImgSrc,
+                    companyName: "UBS",
+                    position: "Senior Software Engineer, Since February 2022",
+                    location: "Zurich, Switzerland",
+                    description: "UBS is one of the biggest Investments Banks in the world. Here I'm responsible to design and implement the Operational Cash Ladder project, a fully cloud based application that process streams of cash flows data and produce real time foresting and historical snapshots. Operational Cash Ladder project enables Cash Management Desk to collaborate in forecasting and managing the Bank's funding requirements based on cash flow sourced from Settlements Systems. The scope is to reduce operational risk by enabling better funding decisions leading to optimisation of operational cash buffers."
+                },
+                {
                     id: "item1",
                     logoImgSrc: creditSuisseImgSrc,
                     companyName: "Credit Suisse",
-                    position: "Senior Software Engineer, Since June 2021",
+                    position: "Senior Software Engineer, June 2021 - January 2022",
                     location: "Zurich, Switzerland",
                     description: "Credit Suisse is the biggest Global Investments Banks in the world. Here I'm managing UAT and Production activities in a Legal Reporting ETL project. Since I have joined this team all planned releases went smoothly, I have identified some critical database performance improvements,  I have redesign our batch job suite to be more flexible and manageable which lead to a significant decrease of critical incidents and also I have simplified some of the development processes."
                 },
