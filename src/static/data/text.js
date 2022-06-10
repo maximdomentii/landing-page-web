@@ -412,10 +412,18 @@ export const text = {
             aboutJourneyTitle: "MEINE REISE",
             aboutJourneyItems: [
                 {
+                    id: "item0",
+                    logoImgSrc: ubsImgSrc,
+                    companyName: "UBS",
+                    position: "Leitender Softwareingenieur, Seit Februar 2022",
+                    location: "Zürich, Schweiz",
+                    description: "UBS ist eine der größten Investmentbanken der Welt. Hier bin ich verantwortlich für das Design und die Implementierung des Operational Cash Ladder-Projekts, einer vollständig Cloud-basierten Anwendung, die Ströme von Cashflow-Daten verarbeitet und Forst- und historische Momentaufnahmen in Echtzeit erstellt. Das Operational Cash Ladder-Projekt ermöglicht es dem Cash Management Desk, bei der Prognose und Verwaltung des Finanzierungsbedarfs der Bank auf der Grundlage von Cashflows aus Abrechnungssystemen zusammenzuarbeiten. Ziel ist es, das operationelle Risiko zu reduzieren, indem bessere Finanzierungsentscheidungen ermöglicht werden, was zu einer Optimierung der operativen Cash-Puffer führt."
+                },
+                {
                     id: "item1",
                     logoImgSrc: creditSuisseImgSrc,
                     companyName: "Credit Suisse",
-                    position: "Leitender Softwareingenieur, seit Juni 2021",
+                    position: "Leitender Softwareingenieur, Juni 2021 - Januar 2022",
                     location: "Zürich, Schweiz",
                     description: "Die Credit Suisse ist die größte globale Investmentbank der Welt. Hier verwalte ich UAT- und Produktionsaktivitäten in einem Legal Reporting ETL-Projekt. Seit ich diesem Team beigetreten bin, verliefen alle geplanten Releases reibungslos, ich habe einige kritische Verbesserungen der Datenbank Leistung identifiziert, ich habe unsere Batch-Job-Suite umgestaltet, um sie flexibler und überschaubarer zu machen, was zu einer deutlichen Verringerung kritischer Vorfälle geführt hat, und ich habe auch einige davon vereinfacht die Entwicklungsprozesse."
                 },
