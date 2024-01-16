@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {Button, Container, Form, Icon, Input, Message, TextArea} from "semantic-ui-react";
+import { Button, Container, Form, Icon, Image, Input, Message, TextArea } from "semantic-ui-react";
 import './contact-form.css';
 import {useStore} from "../../store/store";
 
@@ -147,6 +147,7 @@ const ContactForm = () => {
             <Container text className='font-family-bebas-neue'>
                 <div className='text-align-center'>
                     <p className='contact-title margin-top-1em'>{contactDataText.contactTitle}</p>
+                    <Image src={contactDataText.contactImgSrc} size='huge' centered/>
                     <p className='contact-description margin-top-1em'>{contactDataText.contactDescription}</p>
                     <a href={contactDataText.contactHrefLinkedin} target='_blank' className='contact-icon-color-black'>
                         <Icon name='linkedin' size='big'/>

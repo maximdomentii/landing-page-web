@@ -1,20 +1,16 @@
-import dataStructureAndAlgImg from '../images/data_structure_and_alg.png';
-import logoImg from "../images/logo.jpg";
-import webDevImg from '../images/web_dev.png';
+import logoImg from "../images/logo.png";
+
+import softwareArchitecture from '../images/software_architecture.png';
 import cloudComputingImg from '../images/cloud_computin.png';
 import devOpsImg from '../images/dev_ops.png';
-import family0Img from "../images/family-0.jpg";
-import family1Img from "../images/family-1.jpg";
-import family2Img from "../images/family-2.jpg";
-import family3Img from "../images/family-3.jpg";
-import family4Img from "../images/family-4.jpg";
-import family5Img from "../images/family-5.jpg";
-import family6Img from "../images/family-6.jpg";
-import family7Img from "../images/family-7.jpg";
-import family8Img from "../images/family-8.jpg";
-import family9Img from "../images/family-9.jpg";
-import family10Img from "../images/family-10.jpg";
-import profileAboutImg from "../images/profile_about.jpg";
+import webDevImg from '../images/web_dev.png';
+import dataStructureAndAlgImg from '../images/data_structure_and_alg.png';
+import softwareConsulting from '../images/software_consulting.png';
+
+import homeImg from "../images/home.png";
+import aboutImg from "../images/about.png";
+import contactImg from "../images/contact.png";
+
 import creditSuisseImgSrc from "../images/credit-suisse-logo.png";
 import ubsImgSrc from "../images/ubs-logo.png";
 import oneAndOneImgSrc from "../images/1and1-ionos-logo.png";
@@ -50,13 +46,12 @@ export const text = {
             ]
         },
         home: {
-            profilePhotoTitle: "Hi. I'm Maxim Domentii.",
-            profilePhotoSubtitle: "A Software Engineer.",
+            homeImgSrc: homeImg,
             shortDescriptionHeader: "MY NAME IS MAXIM DOMENTII AND I'M A SWISS BASED FULL-STACK SOFTWARE ENGINEER",
             shortDescriptionParagraphs: [
                 {
                     id: 'p1',
-                    text: "I have " + getYearsOfExperience() + " years of experience in different areas like Web  Development, Microservice Architectures, Cloud Computing or DevOps"
+                    text: "I am a highly skilled and innovative Full-stack Software Engineer with a strong background for over " + getYearsOfExperience() + " years of experience in different areas like Software Architecture, Cloud Computing or Design and Digital Products."
                 },
                 {
                     id: 'p2',
@@ -68,100 +63,66 @@ export const text = {
                 }
             ],
             shortDescriptionMoreButtonLabel: "MORE",
-            skillsColumns: 4,
+            skillsColumns: 3,
             skillsHeader: "SKILLS",
             skills: [
                 {
                     id: 'skill1',
-                    imgSrc: dataStructureAndAlgImg,
-                    title: "Data Structures & Algorithms",
-                    description: "Identifying best structures and algorithms and applying suitable design pattern for each particular use case to get best performance and quality"
+                    imgSrc: softwareArchitecture,
+                    title: "Software Architecture",
+                    description: "I specialize in designing robust and scalable software architectures, ensuring optimal performance and future adaptability"
                 },
                 {
                     id: 'skill2',
+                    imgSrc: cloudComputingImg,
+                    title: "Cloud Computing",
+                    description: "Designing and developing cloud based architectures with infrastructures as a code following best operational principles"
+                },
+                {
+                    id: 'skill3',
+                    imgSrc: devOpsImg,
+                    title: "DevOps",
+                    description: "Managing web based or containerized applications on private web servers or on public cloud providers with automated pipelines"
+                },
+                {
+                    id: 'skill4',
                     imgSrc: webDevImg,
                     title: "Web Development",
                     description: "Extensive expertise with designing and developing scalable and distributed web applications, microservices and APIs"
                 },
                 {
-                    id: 'skill3',
-                    imgSrc: cloudComputingImg,
-                    title: "Cloud Computing",
-                        description: "Designing and developing cloud based architectures with infrastructures as a code following best operational principles"
+                    id: 'skill5',
+                    imgSrc: dataStructureAndAlgImg,
+                    title: "Data Structures & Algorithms",
+                    description: "Identifying best structures and algorithms and applying suitable design pattern for each particular use case to get best performance and quality"
                 },
                 {
-                    id: 'skill4',
-                    imgSrc: devOpsImg,
-                    title: "DevOps",
-                    description: "Deploying web based or containerized applications on private web servers or on public cloud providers with automated pipelines"
+                    id: 'skill6',
+                    imgSrc: softwareConsulting,
+                    title: "Software and Digital Consulting",
+                    description: "From strategic planning to implementation, I guide businesses in optimizing their digital presence for enhanced efficiency and lasting success"
                 }
             ],
-            familyHeader: "HERE IS MY FAMILY",
-            familyParagraphs: [
+            testimonialsHeader: "TESTIMONIALS",
+            testimonials: [
                 {
-                    id: 'p1',
-                    text: "We love to spend time together, to travel and to keep a healthy lifestyle"
-                }
-            ],
-            familyPhotos: [
-                /*{
-                    src: family0Img,
-                    width: 4,
-                    height: 3
+                    id: 'testimonial1',
+                    text: '“Max is a bright and result-driven guy.”',
+                    from: 'Mihai Lacatusu, Head of Domains & SSL Engineering at 1&1 IONOS'
                 },
                 {
-                    src: family1Img,
-                    width: 3,
-                    height: 4
-                },*/
-                {
-                    src: family2Img,
-                    width: 3,
-                    height: 4
+                    id: 'testimonial2',
+                    text: '“Max demonstrated strong conceptual skills starting with the designing architectural blueprint, running technical discussions with CTOs, and lead architects”',
+                    from: 'Martynas Gaurilčikas, Business Analyst'
                 },
                 {
-                    src: family3Img,
-                    width: 4,
-                    height: 4
-                },
-                /*{
-                    src: family4Img,
-                    width: 4,
-                    height: 3
-                },
-                {
-                    src: family5Img,
-                    width: 3,
-                    height: 4
-                },*/
-                {
-                    src: family6Img,
-                    width: 3,
-                    height: 4
-                },
-                {
-                    src: family7Img,
-                    width: 4,
-                    height: 4
-                }/*,
-                {
-                    src: family8Img,
-                    width: 4,
-                    height: 4
-                },
-                {
-                    src: family9Img,
-                    width: 3,
-                    height: 4
-                },
-                {
-                    src: family10Img,
-                    width: 4,
-                    height: 3
-                }*/
-            ]
+                    id: 'testimonial3',
+                    text: '“His mind is about clarity and this could also be seen in his code”',
+                    from: 'Lucian Ilie, Software Engineer'
+                }]
         },
         contact: {
+            contactImgSrc: contactImg,
             contactTitle: "CONTACT",
             contactDescription: "I'm always eager to collaborate with new people and to work on new interesting projects. If you have something in mind, get in touch and I will be happy to discuss ideas with you.",
             contactHrefLinkedin: "https://www.linkedin.com/in/maxim-domentii-4400377a/",
@@ -186,8 +147,8 @@ export const text = {
             contactFormSubmitToken: "Y29udGFjdC11czo1ZSZ5XlhzcXY1Ml9eZ20k"
         },
         about: {
-            aboutImgSrc: profileAboutImg,
-            aboutTitle: "ABOUT MAXIM DOMENTII",
+            aboutImgSrc: aboutImg,
+            aboutTitle: "ABOUT ME",
             aboutSubtitle: "MY NAME IS MAXIM DOMENTII AND I'M A SWISS BASED FULL-STACK SOFTWARE ENGINEER.",
             aboutDescription: "Over the past " + getYearsOfExperience() + " year I'm workings as a Full-stack Software Engineer with DevOps. My expertise is in Data Structures and Algorithms, Design Patterns, Web Development, Microservices and Cloud Computing. I am aiming to work in a dynamic and challenging environment taking ownership of tasks and using the newest technologies and best practices to provide high valuable software and good performance.",
             aboutJourneyTitle: "MY JOURNEY",
@@ -269,13 +230,12 @@ export const text = {
             ]
         },
         home: {
-            profilePhotoTitle: "Hallo. Ich bin Maxim Domentii.",
-            profilePhotoSubtitle: "Ein Software-Ingenieur.",
+            homeImgSrc: homeImg,
             shortDescriptionHeader: "MEIN NAME IST MAXIM DOMENTII UND ICH BIN EIN IN DER SCHWEIZ SITZENDER FULL-STACK-SOFTWARE-ENTWICKLER",
             shortDescriptionParagraphs: [
                 {
                     id: 'p1',
-                    text: "Ich habe " + getYearsOfExperience() + " jahrelange Erfahrung in verschiedenen Bereichen wie Webentwicklung, Microservice-Architecture, Cloud Computing oder DevOps"
+                    text: "Ich bin ein hochqualifizierter und innovativer Full-Stack-Software-Ingenieur mit einem starken Hintergrund von über " + getYearsOfExperience() + " Jahren Erfahrung in verschiedenen Bereichen wie Softwarearchitektur, Cloud Computing oder Design und digitale Produkte."
                 },
                 {
                     id: 'p2',
@@ -287,100 +247,50 @@ export const text = {
                 }
             ],
             shortDescriptionMoreButtonLabel: "MEHR",
-            skillsColumns: 4,
+            skillsColumns: 3,
             skillsHeader: "FÄHIGKEITEN",
             skills: [
                 {
                     id: 'skill1',
-                    imgSrc: dataStructureAndAlgImg,
-                    title: "Datenstrukturen und Algorithmen",
-                    description: "Identifizieren der besten Strukturen und Algorithmen und Anwenden geeigneter Entwurfsmuster für jeden einzelnen Anwendungsfall, um die beste Leistung und Qualität zu erzielen"
+                    imgSrc: softwareArchitecture,
+                    title: "Softwarearchitektur",
+                    description: "Ich habe mich auf die Gestaltung robuster und skalierbarer Softwarearchitekturen spezialisiert, um optimale Leistung und zukünftige Anpassungsfähigkeit zu gewährleisten"
                 },
                 {
                     id: 'skill2',
-                    imgSrc: webDevImg,
-                    title: "Web Entwicklung",
-                    description: "Umfangreiches Know-how beim Design und der Entwicklung skalierbarer und verteilter Webanwendungen, Microservices und APIs"
-                },
-                {
-                    id: 'skill3',
                     imgSrc: cloudComputingImg,
                     title: "Cloud Computing",
                     description: "Entwerfen und Entwickeln von Cloud-basierten Architekturen mit Infrastrukturen als Code nach den besten Antriebsprinzipien"
                 },
                 {
-                    id: 'skill4',
+                    id: 'skill3',
                     imgSrc: devOpsImg,
                     title: "DevOps",
-                    description: "Bereitstellung webbasierter oder containerisierter Anwendungen auf privaten Webservern oder öffentlichen Cloud-Anbietern mit automatisierten Pipelines"
+                    description: "Verwalten Sie webbasierte oder containerisierte Anwendungen auf privaten Webservern oder bei öffentlichen Cloud-Anbietern mit automatisierten Pipelines"
+                },
+                {
+                    id: 'skill4',
+                    imgSrc: webDevImg,
+                    title: "Web Entwicklung",
+                    description: "Umfangreiches Know-how beim Design und der Entwicklung skalierbarer und verteilter Webanwendungen, Microservices und APIs"
+                },
+                {
+                    id: 'skill5',
+                    imgSrc: dataStructureAndAlgImg,
+                    title: "Datenstrukturen und Algorithmen",
+                    description: "Identifizieren der besten Strukturen und Algorithmen und Anwenden geeigneter Entwurfsmuster für jeden einzelnen Anwendungsfall, um die beste Leistung und Qualität zu erzielen"
+                },
+                ,
+                {
+                    id: 'skill6',
+                    imgSrc: softwareConsulting,
+                    title: "Software und Digitale Beratung",
+                    description: "Von der strategischen Planung bis zur Umsetzung begleite ich Unternehmen dabei, ihre digitale Präsenz zu optimieren – für gesteigerte Effizienz und langfristigen Erfolg"
                 }
-            ],
-            familyHeader: "HIER IST MEINE FAMILIE",
-            familyParagraphs: [
-                {
-                    id: 'p1',
-                    text: "Wir lieben es, Zeit miteinander zu verbringen, zu reisen und einen gesunden Lebensstil zu pflegen"
-                }
-            ],
-            familyPhotos: [
-                /*{
-                    src: family0Img,
-                    width: 4,
-                    height: 3
-                },
-                {
-                    src: family1Img,
-                    width: 3,
-                    height: 4
-                },*/
-                {
-                    src: family2Img,
-                    width: 3,
-                    height: 4
-                },
-                {
-                    src: family3Img,
-                    width: 4,
-                    height: 4
-                },
-                /*{
-                    src: family4Img,
-                    width: 4,
-                    height: 3
-                },
-                {
-                    src: family5Img,
-                    width: 3,
-                    height: 4
-                },*/
-                {
-                    src: family6Img,
-                    width: 3,
-                    height: 4
-                },
-                {
-                    src: family7Img,
-                    width: 4,
-                    height: 4
-                }/*,
-                {
-                    src: family8Img,
-                    width: 4,
-                    height: 4
-                },
-                {
-                    src: family9Img,
-                    width: 3,
-                    height: 4
-                },
-                {
-                    src: family10Img,
-                    width: 4,
-                    height: 3
-                }*/
             ]
         },
         contact: {
+            contactImgSrc: contactImg,
             contactTitle: "KONTAKT",
             contactDescription: "Ich freue mich immer darauf, mit neuen Leuten zusammenzuarbeiten und an neuen interessanten Projekten zu arbeiten. Wenn Sie etwas im Sinn haben, kontaktieren Sie mich und ich werde gerne Ideen mit Ihnen besprechen.",
             contactHrefLinkedin: "https://www.linkedin.com/in/maxim-domentii-4400377a/",
@@ -405,8 +315,8 @@ export const text = {
             contactFormSubmitToken: "Y29udGFjdC11czo1ZSZ5XlhzcXY1Ml9eZ20k"
         },
         about: {
-            aboutImgSrc: profileAboutImg,
-            aboutTitle: "ÜBER MAXIM DOMENTII",
+            aboutImgSrc: aboutImg,
+            aboutTitle: "ÜBER MICH",
             aboutSubtitle: "MEIN NAME IST MAXIM DOMENTII UND ICH BIN EIN IN DER SCHWEIZ SITZENDER FULL-STACK-SOFTWARE-ENTWICKLER.",
             aboutDescription: "In den letzten " + getYearsOfExperience() + " Jahren habe ich als Full-Stack Software Engineer mit DevOps gearbeitet. Meine Expertise liegt in Datenstrukturen und Algorithmen, Design Patterns, Webentwicklung, Microservices und Cloud Computing. Mein Ziel ist es, in einem dynamischen und herausfordernden Umfeld zu arbeiten, Aufgaben zu übernehmen und die neuesten Technologien und Best Practices einzusetzen, um hochwertige Software und gute Leistung bereitzustellen.",
             aboutJourneyTitle: "MEINE REISE",

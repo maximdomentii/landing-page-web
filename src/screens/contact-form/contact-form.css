@@ -5,7 +5,7 @@
     margin-top: 1em;
 }
 
-.contact-container .font-family-bebas-neue {
+.contact-container .ui.text.container.font-family-bebas-neue {
     font-family: bebas-neue;
     letter-spacing: 0.5px;
     color: black;

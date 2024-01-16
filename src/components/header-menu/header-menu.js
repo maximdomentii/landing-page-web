@@ -1,4 +1,4 @@
-import {Dropdown, Icon, Image, Menu} from "semantic-ui-react";
+import { Container, Dropdown, Icon, Image, Menu } from "semantic-ui-react";
 import {useNavigate} from "react-router-dom";
 import './header-menu.css';
 import {useStore} from "../../store/store";
@@ -28,7 +28,7 @@ const HeaderMenu = () => {
     }
 
     return (
-        <div style={
+        <Container style={
             {
                 marginTop: '1em',
                 marginLeft: '3em',
@@ -38,7 +38,7 @@ const HeaderMenu = () => {
         }>
             <Menu secondary size='massive'>
                 <Menu.Item header fitted onClick={() => handleItemClick('/')}>
-                    <Image src={headerDataText.logoImgSrc}/>
+                    <Image src={headerDataText.logoImgSrc} size='small'/>
                 </Menu.Item>
                 <Responsive as={Menu.Menu} minWidth={790} position='right'>
                     <Menu.Item
@@ -100,7 +100,8 @@ const HeaderMenu = () => {
                         {/*<Icon name='bars' size='large'/>*/}
                         <Dropdown.Menu
                             style={{
-                                width: width
+                                width: width,
+                                height: height - 53
                             }}
                             className='mobile-dropdown-menu'
                         >
@@ -164,7 +165,7 @@ const HeaderMenu = () => {
                     </Dropdown>
                 </Responsive>
             </Menu>
-        </div>
+        </Container>
     )
 };
 

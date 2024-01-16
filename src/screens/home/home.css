@@ -1,5 +1,5 @@
-.ui.inverted.segment.profile-photo-background {
-    background-image: url("./../../static/images/profile_croped_grey.jpeg");
+.profile-photo-background {
+    background-image: url("./../../static/images/home.png");
     background-size: cover;
     background-repeat: no-repeat;
     height: 0;
@@ -52,8 +52,47 @@
 .skills-overview-container .skills-item-description {
     font-size: 16px;
 }
+.testimonials-container {
+    color: black;
+    text-align: center;
+}
+.testimonials-container .ui[class*="two column"].grid>.column:not(.row), .ui[class*="two column"].grid>.row>.column.testimonials-item {
+    width: 70%;
+}
+.testimonials-container .testimonials-item:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 5px 10px;
+    transform: translate3d(0px, -1px, 0px);
+}
+.testimonials-container .text-container-header {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 32px;
+    color: black;
+}
+.testimonials-container .testimonials-item-right {
+    margin-left: auto;
+}
+.testimonials-container .testimonials-item-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.testimonials-container .testimonials-item-text {
+    font-style: italic;
+    font-size: x-large;
+    margin-bottom: 0;
+    text-align: left;
+}
+.testimonials-container .testimonials-item-from {
+    font-weight: bold;
+    font-size: small;
+    text-align: left;
+}
 .home-container .margin-top-3em {
     margin-top: 3em;
+}
+.home-container .margin-bottom-3em {
+    margin-bottom: 3em;
 }
 .home-container .font-family-bebas-neue {
     font-family: bebas-neue;

@@ -11,9 +11,9 @@ const About = () => {
     return (
         <div className='about-container'>
             <Container className='font-family-bebas-neue'>
-                <Image src={aboutTextData.aboutImgSrc} size='huge' centered/>
                 <p className='about-title margin-top-1em'>{aboutTextData.aboutTitle}</p>
-                <p className='about-subtitle'>{aboutTextData.aboutSubtitle}</p>
+                <Image src={aboutTextData.aboutImgSrc} size='huge' centered/>
+                <p className='about-subtitle margin-top-1em'>{aboutTextData.aboutSubtitle}</p>
                 <p className='about-description'>{aboutTextData.aboutDescription}</p>
                 <Divider horizontal className='margin-top-1em about-journey-title'>
                     {aboutTextData.aboutJourneyTitle}

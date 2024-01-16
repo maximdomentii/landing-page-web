@@ -1,15 +1,9 @@
-import { useState, useCallback } from "react";
-import Gallery from "react-photo-gallery";
-import Carousel, { Modal, ModalGateway } from "react-images";
-import {Button, Container, Divider, Grid, Image, Segment} from "semantic-ui-react";
+import { Button, Container, Divider, Grid, GridRow, Image, Segment } from "semantic-ui-react";
 import './home.css';
 import {useStore} from "../../store/store";
 import {useNavigate} from "react-router-dom";
 
 const Home = () => {
-
-    const [currentImage, setCurrentImage] = useState(0);
-    const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
     const navigate = useNavigate();
 
@@ -17,28 +11,19 @@ const Home = () => {
 
     const homeTextData = textData.home;
 
-    const openLightbox = useCallback((event, { photo, index }) => {
-        setCurrentImage(index);
-        setViewerIsOpen(true);
-    }, []);
-
-    const closeLightbox = () => {
-        setCurrentImage(0);
-        setViewerIsOpen(false);
-    };
-
     const handleDescriptionMoreClick = () => {
         navigate('/about');
     }
 
+    const handleTestimonialsClick = () => {
+        window.open('https://www.linkedin.com/in/maxim-domentii-4400377a/details/recommendations','_blank')
+    }
+
     return (
         <div className='home-container'>
-            <Segment basic inverted className='profile-photo-background'>
-                <div className='profile-photo-content font-family-bebas-neue'>
-                    <p className='profile-photo-title'>{homeTextData.profilePhotoTitle}</p>
-                    <p className='profile-photo-subtitle'>{homeTextData.profilePhotoSubtitle}</p>
-                </div>
-            </Segment>
+            <Container>
+                <Image src={homeTextData.homeImgSrc} size='massive' centered/>
+            </Container>
             <Container className='text-container margin-top-3em font-family-bebas-neue'>
                 <p className='text-container-header'>{homeTextData.shortDescriptionHeader}</p>
                 {homeTextData.shortDescriptionParagraphs.map((data, key) => {
@@ -50,7 +35,7 @@ const Home = () => {
                     {homeTextData.shortDescriptionMoreButtonLabel}
                 </Button>
             </Container>
-            <Container className='skills-overview-container margin-top-3em font-family-bebas-neue'>
+            <Container className='skills-overview-container margin-top-3em margin-bottom-3em font-family-bebas-neue'>
                 <Divider horizontal className='text-container-header'>
                     {homeTextData.skillsHeader}
                 </Divider>
@@ -66,33 +51,25 @@ const Home = () => {
                     })}
                 </Grid>
             </Container>
-            <Container className='text-container margin-top-3em font-family-bebas-neue'>
+            <Container className='testimonials-container margin-top-3em margin-bottom-3em font-family-bebas-neue'>
                 <Divider horizontal className='text-container-header'>
-                    {homeTextData.familyHeader}
+                    {homeTextData.testimonialsHeader}
                 </Divider>
-                {homeTextData.familyParagraphs.map((data, key) => {
-                    return (
-                        <p key={key} className='text-container-paragraph'>{data.text}</p>
-                    );
-                })}
+                <Grid stackable doubling columns={2} className="margin-top-3em">
+                    {homeTextData.testimonials.map((data, key) => {
+                        return (
+                            <Grid.Row key={key} onClick={handleTestimonialsClick}>
+                                <Grid.Column className={key % 3 === 0 ? "testimonials-item"
+                                    : (key % 3 === 1 ? "testimonials-item testimonials-item-right"
+                                        : "testimonials-item testimonials-item-center")}>
+                                    <p className='testimonials-item-text'>{data.text}</p>
+                                    <p className='testimonials-item-from'>{data.from}</p>
+                                </Grid.Column>
+                            </Grid.Row>
+                        )
+                    })}
+                </Grid>
             </Container>
-            <div className='margin-top-3em'>
-                <Gallery photos={homeTextData.familyPhotos} onClick={openLightbox} />
-                <ModalGateway>
-                    {viewerIsOpen ? (
-                        <Modal onClose={closeLightbox}>
-                            <Carousel
-                                currentIndex={currentImage}
-                                views={homeTextData.familyPhotos.map(x => ({
-                                    ...x,
-                                    srcset: x.srcSet,
-                                    caption: x.title
-                                }))}
-                            />
-                        </Modal>
-                    ) : null}
-                </ModalGateway>
-            </div>
         </div>
     );
 };
