@@ -4,11 +4,13 @@ import HeaderMenu from "../header-menu";
 import About from "../../screens/about";
 import ContactForm from "../../screens/contact-form";
 import Footer from "../footer";
+import ScrollToTop from "../scroll-to-top";
 
 const App = () => {
     return (
         <>
             <Router>
+                <ScrollToTop/>
                 <div style={{
                     minHeight: 'calc(100vh - 62px)'
                 }}>

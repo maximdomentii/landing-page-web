@@ -1,0 +1,4 @@
+.recaptcha-parent > div > div {
+    display: flex;
+    place-content: flex-start;
+}

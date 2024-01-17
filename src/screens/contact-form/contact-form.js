@@ -1,7 +1,8 @@
-import {useEffect, useState} from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button, Container, Form, Icon, Image, Input, Message, TextArea } from "semantic-ui-react";
 import './contact-form.css';
 import {useStore} from "../../store/store";
+import GoogleCaptchaV2 from "./contact-form-captcha";
 
 const ContactForm = () => {
 
@@ -20,6 +21,8 @@ const ContactForm = () => {
     const [canSubmit, setCanSubmit] = useState(false);
     const [successMessageHidden, setSuccessMessageHidden] = useState(true);
     const [failureMessageHidden, setFailureMessageHidden] = useState(true);
+    const [isCaptchaInvalid, setIsCaptchaInvalid] = useState(true);
+    const captchaRef = useRef(null);
 
     const valueFieldSetters = {
         name: setNameValue,
@@ -105,40 +108,43 @@ const ContactForm = () => {
     const onSubmit = (event) => {
         event.preventDefault();
 
-        if (!canSubmit || !nameValue || !emailValue || !textValue) {
-            return;
+        if (canSubmit && nameValue && emailValue && textValue && captchaRef?.current?.getValue()) {
+            const token = captchaRef.current.getValue();
+            submit(token);
+
+            setNameValue("");
+            setEmailValue("");
+            setPhoneValue("");
+            setTextValue("");
         }
-
-        submit();
-
-        setNameValue("");
-        setEmailValue("");
-        setPhoneValue("");
-        setTextValue("");
     }
 
-    const submit = () => {
+    const submit = (token) => {
         const requestOptions = {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Basic ' + contactDataText.contactFormSubmitToken
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify({
                 name: nameValue,
                 email: emailValue,
                 phone: phoneValue,
-                text:textValue
+                text: textValue,
+                token: token
             })
         };
         fetch(contactDataText.contactFormSubmitUrl, requestOptions)
-            .then(response => response.json())
-            .then(data => {
-                if (data && data.statusCode && data.statusCode === 200){
+            .then(response => {
+                console.log(response.json());
+                if (response.status === 200) {
                     setSuccessMessageHidden(false);
                 } else {
                     setFailureMessageHidden(false);
                 }
+            })
+            .catch(err => {
+                console.error(err);
+                setFailureMessageHidden(false);
             });
     }
 
@@ -197,7 +203,11 @@ const ContactForm = () => {
                         value={textValue}
                         onChange={event => setValue(event.target.id, event.target.value)}
                     />
-                    <Button className='form-button' basic color='black'>
+                    <GoogleCaptchaV2
+                        captchaRef={captchaRef}
+                        isCaptchaInvalid={isCaptchaInvalid}
+                        setIsCaptchaInvalid={setIsCaptchaInvalid}/>
+                    <Button className='form-button margin-top-1em' basic color='black' disabled={isCaptchaInvalid}>
                         {contactDataText.contactFormButtonLabel}
                     </Button>
                     <Message

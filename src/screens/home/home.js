@@ -42,7 +42,7 @@ const Home = () => {
                 <Grid stackable doubling columns={homeTextData.skillsColumns}>
                     {homeTextData.skills.map((data, key) => {
                         return (
-                            <Grid.Column key={key}>
+                            <Grid.Column key={key} className="skills-item">
                                 <Image src={data.imgSrc} size='small' centered/>
                                 <p className='skills-item-title'>{data.title}</p>
                                 <p className='skills-item-description'>{data.description}</p>
@@ -69,6 +69,9 @@ const Home = () => {
                         )
                     })}
                 </Grid>
+                <Button className='form-button margin-top-3em' basic color='black' onClick={handleTestimonialsClick}>
+                    {homeTextData.shortDescriptionMoreButtonLabel}
+                </Button>
             </Container>
         </div>
     );

@@ -144,7 +144,6 @@ export const text = {
             contactFormAfterSubmitErrorMessageHeader: "Service unavailable",
             contactFormAfterSubmitErrorMessageContent: "Please try again later or contact me on LinkedIn",
             contactFormSubmitUrl: "https://corsr66cq7.execute-api.eu-central-1.amazonaws.com/v1/contact-us",
-            contactFormSubmitToken: "Y29udGFjdC11czo1ZSZ5XlhzcXY1Ml9eZ20k"
         },
         about: {
             aboutImgSrc: aboutImg,
@@ -159,7 +158,7 @@ export const text = {
                     companyName: "UBS",
                     position: "Senior Software Engineer, Since February 2022",
                     location: "Zurich, Switzerland",
-                    description: "UBS is one of the biggest Investments Banks in the world. Here I'm responsible to design and implement the Operational Cash Ladder project, a fully cloud based application that process streams of cash flows data and produce real time foresting and historical snapshots. Operational Cash Ladder project enables Cash Management Desk to collaborate in forecasting and managing the Bank's funding requirements based on cash flow sourced from Settlements Systems. The scope is to reduce operational risk by enabling better funding decisions leading to optimisation of operational cash buffers."
+                    description: "UBS is one of the biggest Investments Banks in the world. Here I'm responsible to design and implement the Shark project, a fully cloud based application that process streams of cash flows data and produce real time foresting and historical snapshots. Shark enables Cash Management Desk to collaborate in forecasting and managing the Bank's funding requirements based on cash flow sourced from Settlements Systems. The scope is to reduce operational risk by enabling better funding decisions leading to optimisation of operational cash buffers."
                 },
                 {
                     id: "item1",
@@ -167,7 +166,7 @@ export const text = {
                     companyName: "Credit Suisse",
                     position: "Senior Software Engineer, June 2021 - January 2022",
                     location: "Zurich, Switzerland",
-                    description: "Credit Suisse is the biggest Global Investments Banks in the world. Here I'm managing UAT and Production activities in a Legal Reporting ETL project. Since I have joined this team all planned releases went smoothly, I have identified some critical database performance improvements,  I have redesign our batch job suite to be more flexible and manageable which lead to a significant decrease of critical incidents and also I have simplified some of the development processes."
+                    description: "Credit Suisse is the biggest Global Investments Banks in the world. Here I was managing UAT and Production activities in a Legal Reporting ETL project. Since I have joined this team all planned releases went smoothly, I have identified some critical database performance improvements,  I have redesign our batch job suite to be more flexible and manageable which lead to a significant decrease of critical incidents and also I have simplified some of the development processes."
                 },
                 {
                     id: "item2",
@@ -175,7 +174,7 @@ export const text = {
                     companyName: "UBS",
                     position: "Senior Software Engineer, December 2019 - May 2021",
                     location: "Zurich, Switzerland",
-                    description: "UBS is the biggest Wealth Management Bank in the world. There I was leading the development of new features for an Investment Content project. During this experience I have leading development of a new notification service and design and developed an automated batch job scheduler manager. Also I have improved the CI process by setting up a fully automated pipeline. Additionally I was very preoccupied to continuously improve the Agile processes which lead to better performance of the team."
+                    description: "UBS is the biggest Wealth Management Bank in the world. There I was leading the development of new features for an Investment Content project. During this experience I have been leading development of a new notification service and design and developed an automated batch job scheduler manager. Also I have improved the CI process by setting up a fully automated pipeline. Additionally I was very preoccupied to continuously improve the Agile processes which lead to better performance of the team."
                 },
                 {
                     id: "item3",
@@ -312,7 +311,6 @@ export const text = {
             contactFormAfterSubmitErrorMessageHeader: "Dienst nicht verfügbar",
             contactFormAfterSubmitErrorMessageContent: "Bitte versuchen Sie es später erneut oder kontaktieren Sie mich auf LinkedIn",
             contactFormSubmitUrl: "https://corsr66cq7.execute-api.eu-central-1.amazonaws.com/v1/contact-us",
-            contactFormSubmitToken: "Y29udGFjdC11czo1ZSZ5XlhzcXY1Ml9eZ20k"
         },
         about: {
             aboutImgSrc: aboutImg,
@@ -327,7 +325,7 @@ export const text = {
                     companyName: "UBS",
                     position: "Leitender Softwareingenieur, Seit Februar 2022",
                     location: "Zürich, Schweiz",
-                    description: "UBS ist eine der größten Investmentbanken der Welt. Hier bin ich verantwortlich für das Design und die Implementierung des Operational Cash Ladder-Projekts, einer vollständig Cloud-basierten Anwendung, die Ströme von Cashflow-Daten verarbeitet und Forst- und historische Momentaufnahmen in Echtzeit erstellt. Das Operational Cash Ladder-Projekt ermöglicht es dem Cash Management Desk, bei der Prognose und Verwaltung des Finanzierungsbedarfs der Bank auf der Grundlage von Cashflows aus Abrechnungssystemen zusammenzuarbeiten. Ziel ist es, das operationelle Risiko zu reduzieren, indem bessere Finanzierungsentscheidungen ermöglicht werden, was zu einer Optimierung der operativen Cash-Puffer führt."
+                    description: "UBS ist eine der größten Investmentbanken der Welt. Hier bin ich verantwortlich für das Design und die Implementierung das Shark-Projekt, einer vollständig Cloud-basierten Anwendung, die Ströme von Cashflow-Daten verarbeitet und Forst- und historische Momentaufnahmen in Echtzeit erstellt. Das Shark-Projekt ermöglicht es dem Cash Management Desk, bei der Prognose und Verwaltung des Finanzierungsbedarfs der Bank auf der Grundlage von Cashflows aus Abrechnungssystemen zusammenzuarbeiten. Ziel ist es, das operationelle Risiko zu reduzieren, indem bessere Finanzierungsentscheidungen ermöglicht werden, was zu einer Optimierung der operativen Cash-Puffer führt."
                 },
                 {
                     id: "item1",
